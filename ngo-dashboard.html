@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DonateHub - NGO Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="ngo-dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="ngo-dashboard.html">
+                    <svg width="200" height="80" viewBox="0 0 400 160">
+                        <!-- Irregular blob background -->
+                        <path d="M180 10 C150 10, 140 30, 150 50 C160 70, 200 70, 220 50 C240 30, 220 10, 180 10" fill="#000"/>
+                        <!-- Fork and knife in cream/white color -->
+                        <path d="M170 20 L170 60" stroke="#fff" stroke-width="8" stroke-linecap="round"/>
+                        <path d="M170 20 L160 15 L170 20 L180 15" stroke="#fff" stroke-width="3"/>
+                        <path d="M200 20 L200 60" stroke="#fff" stroke-width="8" stroke-linecap="round"/>
+                        <path d="M195 25 L205 20 L205 30" stroke="#fff" stroke-width="3" fill="#fff"/>
+                        <!-- Share Bite text -->
+                        <text x="50" y="120" font-family="Arial Black, Arial, sans-serif" font-size="48" font-weight="900" fill="#000">Share Bite</text>
+                    </svg>
+                </a>
+            </div>
+            <div class="nav-links">
+                <a href="#dashboard" class="active">Dashboard</a>
+                <a href="#campaigns">Campaigns</a>
+                <a href="#donations">Donations</a>
+                <a href="#reports">Reports</a>
+                <div class="notification-bell">
+                    <i class="fas fa-bell"></i>
+                    <span class="notification-count">0</span>
+                </div>
+                <div class="profile-dropdown">
+                    <img src="https://placeholder.com/40x40" alt="NGO Profile" class="profile-pic">
+                    <div class="dropdown-content">
+                        <a href="#profile">Profile</a>
+                        <a href="#settings">Settings</a>
+                        <a href="index.html" class="logout">Logout</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="dashboard-container">
+        <div class="dashboard-header">
+            <h1>Welcome, <span id="ngoName">NGO Name</span></h1>
+            <p class="last-login">Last login: <span id="lastLogin">Loading...</span></p>
+        </div>
+
+        <div class="dashboard-grid">
+            <div class="dashboard-card stats">
+                <h3>Overview</h3>
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <i class="fas fa-hand-holding-heart"></i>
+                        <h4>Total Donations</h4>
+                        <p id="totalDonations">₹0</p>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fas fa-users"></i>
+                        <h4>Total Donors</h4>
+                        <p id="totalDonors">0</p>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fas fa-bullhorn"></i>
+                        <h4>Active Campaigns</h4>
+                        <p id="activeCampaigns">0</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dashboard-card recent-donations">
+                <h3>Recent Donations</h3>
+                <div class="donation-list" id="donationList">
+                    <!-- Donations will be inserted here by JavaScript -->
+                </div>
+            </div>
+
+            <div class="dashboard-card campaigns">
+                <h3>Active Campaigns</h3>
+                <div class="campaign-list" id="campaignList">
+                    <!-- Campaigns will be inserted here by JavaScript -->
+                </div>
+                <button class="create-campaign-btn">Create New Campaign</button>
+            </div>
+
+            <div class="dashboard-card notifications">
+                <h3>Notifications</h3>
+                <div class="notification-list" id="notificationList">
+                    <!-- Notifications will be inserted here by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="ngo-dashboard.js"></script>
+</body>
+</html>

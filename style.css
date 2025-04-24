@@ -1,0 +1,514 @@
+:root {
+    --primary-color: #2196F3;
+    --secondary-color: #FFC107;
+    --text-color: #333;
+    --light-gray: #f5f5f5;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+}
+
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo.svg {
+    height: 60px;
+    width: auto;
+    transition: transform 0.2s ease;
+    
+}
+
+.logo svg:hover {
+    transform: scale(1.05);
+}
+
+.logo svg text {
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .logo svg {
+        height: 45px;
+    }
+    
+    .logo svg text {
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo svg {
+        height: 35px;
+    }
+    
+    .logo svg text {
+        font-size: 32px;
+    }
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-color);
+    margin: 0 1rem;
+    font-weight: 500;
+}
+
+.start-campaign-btn {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Hero Section */
+.hero {
+    
+    height: 80vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.503), rgba(0,0,0,0.5)),
+                url('https://imgs.search.brave.com/PZsqeIiJ2nNNGazRxqIByCGO1znzi5HgiyyZ0yx4ZfE/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90My5m/dGNkbi5uZXQvanBn/LzEwLzI5Lzg1LzYw/LzM2MF9GXzEwMjk4/NTYwNzZfQWlvcFdl/cFhuQldkb2hmWGE0/QXFZR0F4VFpoMnhv/MUUuanBn');
+                
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    margin-top: 60px;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.donate-now-btn {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.2rem;
+    margin-top: 2rem;
+    cursor: pointer;
+}
+
+/* Impact Counter */
+.impact-counter {
+    display: flex;
+    justify-content: space-around;
+    padding: 3rem 5%;
+    background-color: var(--light-gray);
+}
+
+.counter-item {
+    text-align: center;
+}
+
+.counter-item i {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+/* Featured Campaigns */
+.featured-campaigns {
+    padding: 4rem 5%;
+}
+
+.campaign-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.campaign-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.campaign-card img {
+    
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.campaign-info {
+    padding: 1.5rem;
+}
+
+.progress-bar {
+    height: 10px;
+    background-color: var(--light-gray);
+    border-radius: 5px;
+    margin: 1rem 0;
+}
+
+.progress {
+    height: 100%;
+    background-color: var(--primary-color);
+    border-radius: 5px;
+}
+
+/* How It Works */
+.how-it-works {
+    background-color: var(--light-gray);
+    padding: 4rem 5%;
+    text-align: center;
+}
+
+.steps {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 3rem;
+}
+
+.step i {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+/* Testimonials */
+.testimonials {
+    padding: 4rem 5%;
+    text-align: center;
+    
+}
+
+.testimonial-slider {
+    margin-top: 2rem;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 3rem 5% 1rem;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.social-links a {
+    color: white;
+    margin-right: 1rem;
+    font-size: 1.5rem;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 1001;
+}
+
+.modal-content {
+    background-color: white;
+    margin: 15% auto;
+    padding: 2rem;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 500px;
+    position: relative;
+}
+
+.close-modal {
+    position: absolute;
+    right: 1rem;
+    top: 0.5rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.modal-body {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.modal-body select,
+.modal-body input {
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.modal-body .donate-btn {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.modal-body .donate-btn:hover {
+    background-color: #1976D2;
+}
+
+/* NGO Registration CTA */
+.ngo-register-link {
+    color: var(--primary-color);
+    padding: 0.5rem 1rem;
+    border: 2px solid var(--primary-color);
+    border-radius: 4px;
+    margin-right: 1rem;
+    transition: all 0.3s;
+}
+
+.ngo-register-link:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.ngo-cta {
+    background: linear-gradient(rgba(0, 0, 0, 0.404), rgba(0, 0, 0, 0.53)),
+                url('https://imgs.search.brave.com/kZHnsrzU_vwNmKtwFLChR5yGTgPzTLgc46nCIv-r-OY/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90NC5m/dGNkbi5uZXQvanBn/LzA5LzEzLzQ0LzY3/LzM2MF9GXzkxMzQ0/Njc0Ml96SGZmSk5v/UzdXM0lKaXhTSFdG/Z2R1U1RZSXRjOExw/MC5qcGc');
+    background-size: cover;
+    background-position: center;
+    padding: 4rem 2rem;
+    text-align: center;
+    color: white;
+}
+
+.cta-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.cta-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.register-ngo-btn, .login-ngo-btn {
+    padding: 1rem 2rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s;
+}
+
+.register-ngo-btn {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.login-ngo-btn {
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+}
+
+.register-ngo-btn:hover {
+    background-color: #1976D2;
+}
+
+.login-ngo-btn:hover {
+    background-color: white;
+    color: var(--primary-color);
+}
+
+@media (max-width: 768px) {
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .register-ngo-btn, .login-ngo-btn {
+        width: 100%;
+        max-width: 300px;
+        text-align: center;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+    
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+    
+    .steps {
+        flex-direction: column;
+        gap: 2rem;
+    }
+}
+
+/* Video Section */
+.video-section {
+    padding: 4rem 2rem;
+    background-color: #f8f9fa;
+}
+
+.video-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.video-container h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: var(--primary-color);
+}
+
+.video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.video-description {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.video-description p {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 1.5rem;
+}
+
+@media (max-width: 768px) {
+    .video-section {
+        padding: 2rem 1rem;
+    }
+    
+    .video-container h2 {
+        font-size: 2rem;
+    }
+    
+    .video-description p {
+        font-size: 1rem;
+    }
+}
+
+/* Login Prompt Modal Styles */
+.login-prompt {
+    text-align: center;
+    padding: 2rem;
+}
+
+.login-prompt i {
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.login-prompt h2 {
+    color: var(--text-color);
+    margin-bottom: 1rem;
+}
+
+.login-prompt p {
+    color: #666;
+    margin-bottom: 2rem;
+}
+
+.login-prompt-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.login-prompt-buttons a {
+    padding: 0.8rem 2rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.login-prompt-buttons .login-btn {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.login-prompt-buttons .login-btn:hover {
+    background-color: var(--primary-color-dark);
+}
+
+.login-prompt-buttons .register-btn {
+    background-color: #f8f9fa;
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+}
+
+.login-prompt-buttons .register-btn:hover {
+    background-color: #e9ecef;
+}

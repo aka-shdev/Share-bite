@@ -1,0 +1,179 @@
+
+
+.about-container {
+    padding-top: 60px; /* Account for fixed navbar */
+}
+
+.hero-section {
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+                url('https://img.freepik.com/free-vector/trendy-retro-synth-line-perspective-wallpaper-with-smoke-effect_1017-43048.jpg?t=st=1745473899~exp=1745477499~hmac=3577ca2635045824a99d82bf47d915921a2720925878ff401d10c9ef1883e38b&w=1380');
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+}
+
+.mission-section {
+    background-color: var(--light-gray);
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.section-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.section-content h2 {
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+.section-content p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+}
+
+.values-section {
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+    padding: 0 2rem;
+}
+
+.value-card {
+    padding: 2rem;
+    background: rgba(203, 244, 179, 0.311);
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(222, 185, 22, 0.451);
+    transition: transform 0.3s ease;
+}
+
+.value-card:hover {
+    transform: translateY(-5px);
+}
+
+.value-card i {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.team-section {
+    background-color: var(--light-gray);
+    padding: 4rem 2rem;
+    text-align: center;
+    
+}
+
+.team-grid {
+    display: inline-flex;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 3rem;
+    margin-top: 3rem;
+    padding: 0 2rem;
+}
+
+.team-member {
+    text-align: center;
+}
+
+.team-member img {
+    width: 300px;
+    height: 300px;
+    border-radius: 10%;
+    margin-bottom: 1rem;
+    object-fit: cover;
+    box-shadow: 10px 10px 103px 21px rgb(2, 21, 21);
+-webkit-box-shadow: 10px 10px 103px 21px rgba(203, 157, 42, 0.75);
+-moz-box-shadow: 10px 10px 103px 21px rgba(0,0,0,0.75);
+}
+
+.impact-section {
+    padding: 4rem 2rem;
+    text-align: center;
+    background: linear-gradient(rgba(0, 0, 0, 0.451), rgba(0,0,0,0.8)),
+                url('https://img.freepik.com/free-photo/world-map-continent-global-support-graphic_53876-124528.jpg?t=st=1745471815~exp=1745475415~hmac=cfa8123167c0c565d9c7ee0d3f6ff70de0e22a5303b8d9b1f90e35b735192396&w=1380');
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+.impact-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.stat h3 {
+    font-size: 2.5rem;
+    color: var(--secondary-color);
+    margin-bottom: 0.5rem;
+}
+
+.contact-section {
+    padding: 4rem 2rem;
+    text-align: center;
+    background-color: var(--light-gray);
+}
+
+.contact-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.contact-item i {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-content p {
+        font-size: 1.2rem;
+    }
+
+    .values-grid,
+    .team-grid,
+    .impact-stats,
+    .contact-info {
+        grid-template-columns: 1fr;
+    }
+
+    .section-content {
+        padding: 0 1rem;
+    }
+}
